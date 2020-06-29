@@ -162,6 +162,9 @@ print("c1 =", c1, ", c2 =", c2, ", c3 =", c3)
 print("type(c1) =", type(c1), ", type(c2) =", type(c2), ", type(c3) =", type(c3))
 
 # Extended iterable unpacking with set would generate different results.
+#
+# https://python-forum.io/Thread-Why-the-result-of-extended-iterable-unpacking-with-set-is-unpredictable
+# because set is unordered collection by definition :-) by buran
 d1, *d2, d3 = {1, 2, 3, "a", "acc"}
 print("d1 =", d1, ", d2 =", d2, ", d3 =", d3)
 print("type(d1) =", type(d1), ", type(d2) =", type(d2), ", type(d3) =", type(d3))
