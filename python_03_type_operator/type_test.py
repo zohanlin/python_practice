@@ -136,3 +136,32 @@ print(password_dict_2)
 password_dict_2 = dict([("app", 7), ("beach", 889), ("comedy", 99)])
 print(password_dict_2)
 print(dict.fromkeys(["Avril", "zohan"], "None"))
+
+print("\ndict test")
+act = 1, "apple", "ax"
+print("type(act)", type(act))
+print("act =", act)
+act2 = (2, False, "vet", "pet")
+print("type(act2)", type(act2))
+print("act2 =", act2)
+a1, a2, a3, a4 = act2
+print("a1 = ", a1, ", a2 = ", a2, ",\na3 = ", a3, ", a4 = ", a4)
+print("a1 = ", a1, ", a2 = ", a2, ",\na3 = ", a3, ", a4 = ", a4, sep="")
+x = 14
+y = 99
+print("x =", x, ", y =", y)
+x, y = y, x
+print("x =", x, ", y =", y)
+x, y = (y, x)
+print("x =", x, ", y =", y)
+b1, *b2, b3 = (1, 2, 3, "a", "a", "acc")
+print("b1 =", b1, ", b2 =", b2, ", b3 =", b3)
+print("type(b1) =", type(b1), ", type(b2) =", type(b2), ", type(b3) =", type(b3))
+c1, *c2, c3 = [1, 2, 3, "a", "a", "acc"]
+print("c1 =", c1, ", c2 =", c2, ", c3 =", c3)
+print("type(c1) =", type(c1), ", type(c2) =", type(c2), ", type(c3) =", type(c3))
+
+# Extended iterable unpacking with set would generate different results.
+d1, *d2, d3 = {1, 2, 3, "a", "acc"}
+print("d1 =", d1, ", d2 =", d2, ", d3 =", d3)
+print("type(d1) =", type(d1), ", type(d2) =", type(d2), ", type(d3) =", type(d3))
