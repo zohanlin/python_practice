@@ -137,7 +137,7 @@ password_dict_2 = dict([("app", 7), ("beach", 889), ("comedy", 99)])
 print(password_dict_2)
 print(dict.fromkeys(["Avril", "zohan"], "None"))
 
-print("\ndict test")
+print("\ntuple test")
 act = 1, "apple", "ax"
 print("type(act)", type(act))
 print("act =", act)
@@ -168,3 +168,236 @@ print("type(c1) =", type(c1), ", type(c2) =", type(c2), ", type(c3) =", type(c3)
 d1, *d2, d3 = {1, 2, 3, "a", "acc"}
 print("d1 =", d1, ", d2 =", d2, ", d3 =", d3)
 print("type(d1) =", type(d1), ", type(d2) =", type(d2), ", type(d3) =", type(d3))
+
+print("\nVariable test")
+e1 = [1, 2, 3]
+e2 = e1
+print("sys.getrefcount(e1) =", sys.getrefcount(e1))
+print("sys.getrefcount(e2) =", sys.getrefcount(e2))
+print("id(e1) =", id(e1))
+print("id(e2) =", id(e2))
+e1 = [1, 2, 3]
+e2 = e1
+e3 = e2
+print("sys.getrefcount(e1) =", sys.getrefcount(e1))
+print("sys.getrefcount(e2) =", sys.getrefcount(e2))
+print("sys.getrefcount(e3) =", sys.getrefcount(e3))
+print("id(e1) =", id(e1))
+print("id(e2) =", id(e2))
+print("id(e3) =", id(e3))
+print("e3 =", e3)
+e1[0] = 99
+print("e2 =", e2)
+e3[2] = 101
+print("e1 =", e1)
+print("sys.getrefcount(e1) =", sys.getrefcount(e1))
+print("sys.getrefcount(e2) =", sys.getrefcount(e2))
+print("sys.getrefcount(e3) =", sys.getrefcount(e3))
+print("id(e1) =", id(e1))
+print("id(e2) =", id(e2))
+print("id(e3) =", id(e3))
+e2 = 20
+print("e1 =", e1)
+print("e2 =", e2)
+print("e3 =", e3)
+print("sys.getrefcount(e1) =", sys.getrefcount(e1))
+print("sys.getrefcount(e2) =", sys.getrefcount(e2))
+print("sys.getrefcount(e3) =", sys.getrefcount(e3))
+print("id(e1) =", id(e1))
+print("id(e2) =", id(e2))
+print("id(e3) =", id(e3))
+del e3
+print("e1 =", e1)
+print("e2 =", e2)
+print("sys.getrefcount(e1) =", sys.getrefcount(e1))
+print("sys.getrefcount(e2) =", sys.getrefcount(e2))
+print("id(e1) =", id(e1))
+print("id(e2) =", id(e2))
+
+import decimal
+arg1 = 0.8
+arg2 = 0.8
+f1 = float(arg1)
+f2 = float(arg2)
+g1 = decimal.Decimal(arg1)
+g2 = decimal.Decimal(arg2)
+print("\n#### float ####")
+print("{0} + {1} = {2}".format(f1, f2, f1 + f2))
+print("{0} - {1} = {2}".format(f1, f2, f1 - f2))
+print("{0} * {1} = {2}".format(f1, f2, f1 * f2))
+print("{0} / {1} = {2}".format(f1, f2, f1 / f2))
+print("\n#### decimal ####")
+print("{0} + {1} = {2}".format(g1, g2, g1 + g2))
+print("{0} - {1} = {2}".format(g1, g2, g1 - g2))
+print("{0} * {1} = {2}".format(g1, g2, g1 * g2))
+print("{0} / {1} = {2}".format(g1, g2, g1 / g2))
+
+print("\n")
+print("{0} ** {1} = {2}".format(2, 3, 2 ** 3))
+print("{0} ** {1} = {2}".format(16, 0.5, 16 ** 0.5))
+
+print("{0} / {1} = {2}".format(10, 3, 10 / 3))
+print("{0} // {1} = {2}".format(10, 3, 10 // 3))
+print("{0} / {1} = {2}".format(10, 3.0, 10 / 3.0))
+print("{0} // {1} = {2}".format(10, 3.0, 10 // 3.0))
+
+print("{0} % {1} = {2}".format(10, 3, 10 % 3))
+print("{0} % {1} = {2}".format(11, 3, 11 % 3))
+
+print("\n#### string ####")
+h1 = "Avril"
+h2 = "Lavigne"
+print("h1 =", h1)
+print("h2 =", h2)
+print("h1 + h2 =", h1 + h2)
+print("h1 * 7 =", h1 * 7)
+
+i_str = "101"
+i_int = 99
+print("i_str =", i_str)
+print("i_int =", i_int)
+
+print("i_str + str(i_int) =", i_str + str(i_int))
+print("int(i_str) + i_int =", int(i_str) + i_int)
+
+print("\n#### list & tuple ####")
+
+j_list = ["one", "two"]
+j_list_2 = ["three", "four"]
+print("j_list =", j_list)
+print("j_list_2 =", j_list_2)
+print("j_list + j_list_2 =", j_list + j_list_2)
+print("j_list_2 * 3 =", j_list_2 * 3)
+j_list_2_2 = j_list_2
+j_list_3 = j_list_2 + j_list ## new list, not reference?
+j_list_4 = [j_list_2, j_list]
+j_list_5 = j_list_2 * 3 ## new list, not reference?
+j_tuple = (j_list_2, j_list)
+print("j_list_2_2 =", j_list_2_2)
+print("j_list_3 = j_list_2 + j_list =", j_list_3)
+print("j_list_4 = [j_list_2, j_list] =", j_list_4)
+print("j_list_5 = j_list_2 * 3 =", j_list_5)
+print("j_tuple =", j_tuple)
+j_list_2[0] = "seven"
+print("j_list_2 =", j_list_2)
+print("j_list_2_2 =", j_list_2_2)
+print("j_list_3 =", j_list_3)
+print("j_list_4 =", j_list_4)
+print("j_list_5 =", j_list_5)
+print("j_tuple =", j_tuple)
+j_list_4[0] = j_list_5
+# j_tuple[0] = j_list_5  ##'tuple' object does not support item assignment
+print("j_list_4 =", j_list_4)
+# print("j_tuple =", j_tuple)
+
+k_tuple = ("one", "two")
+k_tuple_2 = ("three", "four")
+print("k_tuple =", k_tuple)
+print("k_tuple_2 =", k_tuple_2)
+print("k_tuple + k_tuple_2 =", k_tuple + k_tuple_2)
+print("k_tuple_2 * 3 =", k_tuple_2 * 3)
+k_tuple_3 = k_tuple_2
+k_tuple_4 = k_tuple_2 * 3
+k_tuple_5 = k_tuple + k_tuple_2
+k_tuple_6 = (k_tuple, k_tuple_2)
+print("k_tuple_3 =", k_tuple_3)
+print("k_tuple_4 =", k_tuple_4)
+print("k_tuple_5 =", k_tuple_5)
+print("k_tuple_6 =", k_tuple_6)
+
+print("\ncompare test")
+l_str1 = "Mai"
+l_str2 = "Kuraki"
+print("\"{0}\" > \"{1}\" ?  {2}".format(l_str1, l_str2, l_str1 > l_str2))
+print("\"{0}\" == \"{1}\" ?  {2}".format(l_str1, l_str2, l_str1 == l_str2))
+print("\"{0}\" < \"{1}\" ?  {2}".format(l_str1, l_str2, l_str1 < l_str2))
+print("\"{0}\" != \"{1}\" ?  {2}".format(l_str1, l_str2, l_str1 != l_str2))
+
+print("\nlogic test")
+m_str1 = "ZOHAN"
+m_str2 = "Dominic"
+print("m_str1 =", m_str1)
+print("m_str2 =", m_str2)
+print("兩個都大寫 ? ", m_str1.isupper() and m_str2.isupper())
+print("有一個是大寫 ? ", m_str1.isupper() or m_str2.isupper())
+print("都不是大寫 ? ", not (m_str1.isupper() or m_str2.isupper()))
+print("都不是大寫 ? ", not (m_str1.isupper()) and not (m_str2.isupper()))
+print("m_str1.isupper() and m_str2.isupper() =",  m_str1.isupper() and m_str2.isupper())
+print("m_str1.isupper() and \"Avril\" = ", m_str1.isupper() and "Avril")
+print("m_str2.isupper() and \"Avril\" =", m_str2.isupper() and "Avril")
+print("m_str1.isupper() or \"Avril\" =", m_str1.isupper() or "Avril")
+print("m_str2.isupper() or \"Avril\" =", m_str2.isupper() or "Avril")
+print("[] and \"Avril\" =", [] and "Avril")
+print("[1, 2] and \"Avril\" =", [1, 2] and "Avril")
+print("[] or \"Avril\" =", [] or "Avril")
+print("[1, 2] or \"Avril\" =", [1, 2] or "Avril")
+
+print("\nbitwise test")
+print("0 AND 0 = {0}".format(0 & 0))
+print("0 AND 1 = {0}".format(0 & 1))
+print("1 AND 0 = {0}".format(1 & 0))
+print("1 AND 1 = {0}".format(1 & 1))
+print("0 or 0 = {0}".format(0 | 0))
+print("0 or 1 = {0}".format(0 | 1))
+print("1 or 0 = {0}".format(1 | 0))
+print("1 or 1 = {0}".format(1 | 1))
+print("0 xor 0 = {0}".format(0 ^ 0))
+print("0 xor 1 = {0}".format(0 ^ 1))
+print("1 xor 0 = {0}".format(1 ^ 0))
+print("1 xor 1 = {0}".format(1 ^ 1))
+print("not 0 = {0}".format(~0))
+print("not (-1) = {0}".format(~(-1)))
+print("not 14 = {0}".format(~14))
+print("not (-15) = {0}".format(~(-15)))
+
+dec = 17
+print("The decimal value of", dec, "is:")
+print(bin(dec), "in binary.")
+print(oct(dec), "in octal.")
+print(hex(dec), "in hexadecimal.")
+
+n1 = 0b1111
+print("n1 =", n1)
+print("bin(n1) =", bin(n1))
+print("oct(n1) =", oct(n1))
+print("hex(n1) =", hex(n1))
+print("bin(~n1) =", bin(~n1))
+print("n1 >> 1 =", bin(n1 >> 1))
+print("n1 >> 2 =", bin(n1 >> 2))
+print("n1 >> 3 =", bin(n1 >> 3))
+print("n1 >> 4 =", bin(n1 >> 4))
+print("n1 >> 5 =", bin(n1 >> 5))
+print("n1 << 1 =", bin(n1 << 1))
+print("n1 << 2 =", bin(n1 << 2))
+print("n1 << 3 =", bin(n1 << 3))
+print("n1 << 4 =", bin(n1 << 4))
+print("n1 << 5 =", bin(n1 << 5))
+n2 = n1 << 5
+print("bin(n2) =", bin(n2))
+print("n2 >> 1 =", bin(n2 >> 1))
+print("n2 << 1 =", bin(n2 << 1))
+print("n2 << 100 =", bin(n2 << 100))
+print("n2 >> 100 =", bin(n2 >> 100))
+
+admins = {"zohan", "Dominic"}
+users = set()
+users.add("Monica")
+users.add("Judy")
+users.add("Simon")
+users.add("zohan")
+users1 = {"Dominic"}
+print("存在user中的admin :{0}".format(admins & users) )
+print("存在user中，不是admin :{0}".format(users - admins) )
+print("全部的人 :{0}".format(users | admins) )
+print("身分不重複 :{0}".format(users ^ admins) )
+print("admin有包括users ? {}".format(admins > users) )
+print("users有包括admin ? {}".format(admins < users) )
+print("admin有包括users1 ? {}".format(admins > users1) )
+print("users1有包括admin ? {}".format(admins < users1) )
+
+admins_2 = ["zohan", "Dominic"]
+print("{0}".format(admins_2) )
+admins_3 = ("zohan", "Dominic")
+print("{0}".format(admins_3) )
+
+
