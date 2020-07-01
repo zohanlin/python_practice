@@ -400,4 +400,96 @@ print("{0}".format(admins_2) )
 admins_3 = ("zohan", "Dominic")
 print("{0}".format(admins_3) )
 
+print("\nslicing test")
+o_name = "zohan"
+print("o_name = ", o_name)
+print("o_name[0] =", o_name[0])
+print("o_name[1] =", o_name[1])
+print("o_name[2] =", o_name[2])
+print("o_name[3] =", o_name[3])
+print("o_name[4] =", o_name[4])
+print("o_name[-1] =", o_name[-1])
+print("o_name[-2] =", o_name[-2])
+print("o_name[-3] =", o_name[-3])
+print("o_name[-4] =", o_name[-4])
+print("o_name[-5] =", o_name[-5])
+print("o_name[0:] =", o_name[0:])
+print("o_name[0:0] =", o_name[0:0])
+print("o_name[0:1] =", o_name[0:1])
+print("o_name[0:2] =", o_name[0:2])
+print("o_name[0:3] =", o_name[0:3])
+print("o_name[0:4] =", o_name[0:4])
+print("o_name[0:5] =", o_name[0:5])
+print("o_name[0:-1] =", o_name[0:-1])
+print("o_name[-4:-1] =", o_name[-4:-1])
+print("o_name[0::2] =", o_name[0::2])
+print("o_name[0::3] =", o_name[0::3])
+print("o_name[0::4] =", o_name[0::4])
+print("o_name[0::5] =", o_name[0::5])
+print("o_name[0::1] =", o_name[0::1])
+print("o_name[::1] =", o_name[::1])
+print("o_name[0:5:1] =", o_name[0:5:1])
+print("o_name[0:-1:1] =", o_name[0:-1:1])
+print("o_name[0::-1] =", o_name[0::-1])
+print("o_name[0::-2] =", o_name[0::-2])
+print("o_name[:0:-1] =", o_name[:0:-1])
+print("o_name[:1:-1] =", o_name[:1:-1])
+print("o_name[:-2:-1] =", o_name[:-2:-1])
+print("o_name[:-3:-1] =", o_name[:-3:-1])
+print("o_name[:-4:-1] =", o_name[:-4:-1])
+print("o_name[:-5:-1] =", o_name[:-5:-1])
+print("o_name[:-6:-1] =", o_name[:-6:-1])
+print("o_name[-1:0:-1] =", o_name[-1:0:-1])
+print("o_name[-1:-1:-1] =", o_name[-1:-1:-1])
+print("o_name[:-1:-1] =", o_name[:-1:-1])
+print("o_name[-1::-1] =", o_name[-1::-1])
+print("o_name[-1:-2:-1] =", o_name[-1:-2:-1])
+print("o_name[-1:-3:-1] =", o_name[-1:-3:-1])
+print("o_name[-1:-4:-1] =", o_name[-1:-4:-1])
+print("o_name[-1:-5:-1] =", o_name[-1:-5:-1])
+print("o_name[-1:-6:-1] =", o_name[-1:-6:-1])
+print("o_name[::-1] =", o_name[::-1])
+print("o_name[0::-1] =", o_name[0::-1])
+print("o_name[0:-1:-1] =", o_name[0:-1:-1])
+print("o_name[-5:-1:-1] =", o_name[-5:-1:-1])
+print("o_name[-5::-1] =", o_name[-5::-1])
+print("o_name[-1:0:1] =", o_name[-1:0:1])
+print("o_name[4:0:1] =", o_name[4:0:1])
+print("o_name[4::1] =", o_name[4::1])
+
+# string = "zohan"
+#
+# step = -1
+#   end     <--     <--     <--     start
+#   [0]     [1]     [2]     [3]     [4]
+#   z       o       h       a       n
+#
+# step = 1
+#   start   <--     <--     <--     end
+#   [0]     [1]     [2]     [3]     [4]
+#   z       o       h       a       n
+
+p1_num = [1, 2, 3, 4]
+p2_num = [5, 6, 7, 8]
+print("p1_num =", p1_num)
+p1_tuple = (p1_num, p2_num)
+p2_tuple = p1_tuple[:]
+print("p1_tuple =", p1_tuple)
+p2_tuple[0][0] = 900
+p2_tuple[0][3] = 903
+p2_tuple[1][0] = 910
+p2_tuple[1][3] = 913
+print("p1_num =", p1_num)
+print("p1_tuple =", p1_tuple)
+p1_num[1:3] = [82, 83]
+print("p1_num =", p1_num)
+p1_num[1:3] = ["Avril Lavigne"]
+print("p1_num =", p1_num)
+del p1_num[1:2]
+print("p1_num =", p1_num)
+del p1_num[1:2]
+print("p1_num =", p1_num)
+p1_num[:] = []
+print("p1_num =", p1_num)
+
 
