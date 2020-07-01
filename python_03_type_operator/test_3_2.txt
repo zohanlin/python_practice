@@ -1,0 +1,11 @@
+import sys
+
+test2_1_list = list(sys.argv[1:])
+print(test2_1_list)
+key_word = test2_1_list[0]
+print("key_word =", key_word)
+test2_1_set = set(test2_1_list)
+print(test2_1_set)
+test2_2_list = list(test2_1_set)
+print("test2_1_list.count({0}) ={1}".format(key_word, test2_1_list.count(key_word)))
+print("len(test2_2_list) =", len(test2_2_list))

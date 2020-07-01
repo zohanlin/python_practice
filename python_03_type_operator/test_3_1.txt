@@ -1,0 +1,15 @@
+import sys
+
+
+#test_1_list = ["apple", "boy", "cat", "dog", "boy", "girl", "apple", "boy"]
+#print(test_1_list[:])
+#print("test_1_list.count() =", test_1_list.count("boy"))
+#print("len(test_1_list) =", len(test_1_list))
+#test_1_set = set(test_1_list[:])
+
+test_1_set = set(sys.argv[1:])
+print(test_1_set)
+test_2_list = list(test_1_set)
+print(test_2_list)
+print("test_2_list.count() =", test_2_list.count("boy"))
+print("len(test_2_list) =", len(test_2_list))

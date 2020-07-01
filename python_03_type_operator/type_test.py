@@ -492,4 +492,39 @@ print("p1_num =", p1_num)
 p1_num[:] = []
 print("p1_num =", p1_num)
 
+print(""" Hi, today is your day.
+a Yo-Yo is a tool.
+\n\t.""")
 
+print(r""" Hi, today is your day.
+a Yo-Yo is a tool.
+\n\t.""")
+
+print("\nTest 1")
+test_1_list = ["apple", "boy", "cat", "dog", "boy", "girl", "apple", "boy"]
+print(test_1_list[:])
+print("test_1_list.count() =", test_1_list.count("boy"))
+print("len(test_1_list) =", len(test_1_list))
+test_1_set = set(test_1_list[:])
+#test_1_set = set(sys.argv[1:])  ## python E:\python_code\test_3_1.txt apple boy cat girl boy cat
+print(test_1_set)
+test_2_list = list(test_1_set)
+print(test_2_list)
+print("test_2_list.count() =", test_2_list.count("boy"))
+print("len(test_2_list) =", len(test_2_list))
+#test_2_list = [test_1_set[:]]
+
+
+print("\nTest 2")
+test2_1_list_raw = ["apple", "boy", "cat", "dog", "boy", "girl", "apple", "boy"]
+print(test2_1_list_raw[:])
+test2_1_list = list(test2_1_list_raw[:])
+#test2_1_list = list(sys.argv[1:])  ## python E:\python_code\test_3_2.txt apple boy cat girl boy cat apple apple
+print(test2_1_list)
+key_word = test2_1_list[0]
+print("key_word =", key_word)
+test2_1_set = set(test2_1_list)
+print(test2_1_set)
+test2_2_list = list(test2_1_set)
+print("test2_1_list.count({0}) ={1}".format(key_word, test2_1_list.count(key_word)))
+print("len(test2_2_list) =", len(test2_2_list))
